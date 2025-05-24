@@ -17,6 +17,7 @@ const taskStore = useTaskStore();
 const newTask = ref({
     name: "",
 });
+
 const message = ref("");
 
 const { allTasks, taskCount, favouriteCount, favouriteTasks, completedTasks } = storeToRefs(taskStore)
@@ -25,7 +26,7 @@ const { allTasks, taskCount, favouriteCount, favouriteTasks, completedTasks } = 
 const handleSubmit = () => {
     if (newTask.value.name) {
         taskStore.addTask({
-            id: taskCount.value + 1,
+            id: taskStore.getlastTaskId() + 1, // increment last task id
             name: newTask.value.name,
             completed: false,
             favourite: false,
@@ -35,9 +36,6 @@ const handleSubmit = () => {
         setTimeout(() => message.value = "", 2000) // reset messaggio dopo 2s
     }
 };
-
-
-
 
 
 </script>

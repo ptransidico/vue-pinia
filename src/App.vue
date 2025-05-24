@@ -1,8 +1,6 @@
-<script setup>
-import { useTaskStore } from './stores/TaskStore'; 
+<script setup> 
 import Tasks from './components/tasks/Tasks.vue';
 import TaskForm from './components/tasks/TaskForm.vue';
-const taskStore = useTaskStore();
 </script>
 
 <template>
