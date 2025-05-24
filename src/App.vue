@@ -7,7 +7,7 @@ import TaskForm from './components/tasks/TaskForm.vue';
   <div class="flex flex-col bg-green-300 w-full mx-auto justify-center items-center rounded-md">
     <img src="https://pinia.vuejs.org/logo.svg" alt="pinia logo" width="50">
     <p class="text-xl text-center mt-4 font-bold">
-      Pinia - Store Manager
+      Pinia - Store Manager (Local Storage)
     </p>
     <TaskForm></TaskForm>
   </div>
